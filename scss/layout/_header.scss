@@ -1,0 +1,150 @@
+//main styles
+
+header {
+    width: 100%;
+    height: 7vh;
+    border-bottom: 10px solid white;
+    background-color: $darkred;
+    margin: 0 auto;
+    .website--logo {
+        height: 100%;
+    }
+}
+
+.nav--bar {
+    height: 100%;
+    @extend .flex-sb-c;
+    &--logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    nav {
+        display: none;
+        font-family: $mainfont;
+        font-weight: bold;
+        ul {
+            display: flex;
+            li:not(li:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+    @include breakpointup(tablet) {
+        nav {
+            display: block;
+        }
+        .hamburger-lines {
+            display: none;
+        }
+    }
+}
+
+
+//hamburger menu styles
+
+.hamburger-lines {
+    height: 26px;
+    width: 32px;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: white;
+        .line1 {
+                transform-origin: 0% 0%;
+                transition: transform 0.4s ease-in-out;
+        }
+        .line2 {
+                transition: transform 0.2s ease-in-out;
+        }
+        .line3 {
+                transform-origin: 0% 100%;
+                transition: transform 0.4s ease-in-out;
+        }
+    }
+}
+
+
+.close {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    width: 32px;
+    height: 32px;
+    &:hover {
+        opacity: 1;
+    }
+    &::before, &::after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 25px;
+        width: 2px;
+        background-color: white;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+
+//mobile nav
+
+.mobile--nav {
+    display: none;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    h1 {
+        position: absolute;
+        font-family: $mainfont;
+        color: white;
+    }
+}
+
+.mobile--triangle {
+    &--top {
+        height: 100vh;
+        width: 100%;
+        @include drawtriangle(topRight, $bluegreen, 50vh, 100vw)
+    }
+    &--mid {
+        + h1 {
+            top: 49%;
+            left: 8%;
+            + h1 {
+                top: 12%;
+                left: 70%;
+            }
+        }
+        position: absolute;
+        top: 0%;
+        height: 100vh;
+        width: 100%;
+        @include drawtriangle(right, $yellow);
+        border-width: 50vh 0 50vh 100vw;
+    }
+    &--bottom {
+        + h1 {
+            top: 80%;
+            left: 70%;
+        }
+        height: 100vh;
+        width: 100%;
+        @include drawtriangle(bottomRight, $darkred, 50vh, 100vw)
+    }
+}
+
+
+
+
+

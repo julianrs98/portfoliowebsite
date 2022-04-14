@@ -1,0 +1,17 @@
+//scss folder
+@import 'variables';
+@import 'reset';
+@import 'globals';
+@import 'mixins';
+@import 'helpers';
+@import 'animations';
+
+
+
+// layout folder style
+@import 'layout/footer', 'layout/header', 'layout/footer', 'layout/portfolio','layout/hero', 'layout/main', 'layout/contact';
+
+
+
+
+

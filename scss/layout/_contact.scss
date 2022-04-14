@@ -1,0 +1,116 @@
+.contact--section {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background-color: $bluegreen;
+    @include breakpointup('desktops') {
+        h1:nth-child(2) {
+            font-size: 2.5rem;
+            + h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+    .triangle--topright {
+        display: flex;
+        float: right;
+        @include drawtriangle (topRight, $red, 35vh, 100vw);
+    }
+    h1:first-of-type {
+        position: absolute;
+        top: 5%;
+        text-align: right;
+        width: 100%;
+        padding-right: 10px;
+    }
+    .contact--section-linkedin {
+        position: absolute;
+        background-image: url('../images/icons8-linkedin-480.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 10%;
+        left: 75%;
+        height: 15%;
+        width: 20%;
+    }
+    h1:last-of-type {
+        text-align: center;
+        width: 55vw;
+        font-size: 2rem;
+        position: absolute;
+        top: 24%;
+    }
+}
+
+//form
+
+.contact--section--form {
+    margin: 0 auto;
+    height: 55%;
+    width: 85%;
+    input:first-of-type {
+        margin-bottom: 5%;
+        border-radius: 2px;
+        border: none;
+    }
+    label:last-of-type {
+        display: block;
+        height: 45%;
+        textarea {
+            height: 100%;
+            width: 100%;
+            display: block;
+            resize: none;
+            border-radius: 2px;
+            border: none;
+        }
+    }
+    button {
+        background-color: $yellow;
+    }
+    @include breakpointup('desktops') {
+        input:first-of-type {
+            margin-bottom: 3%;
+            border-radius: 2px;
+            border: none;
+            height: 6%;
+        }
+        label:last-of-type {
+                height: 77%;
+                display: flex;
+                align-items: center;
+            textarea {
+                height: 90%;
+                width: 65%;
+                resize: none;
+                border-radius: 2px;
+                border: none;
+                margin-left: 5px;
+                font-size: 18px;
+            }
+        }
+        button {
+            background-color: $yellow;
+            font-size: 30px;
+            height: 2.5em;
+            width: 6em;
+            margin-left: 5%;
+        }
+    }
+    @include breakpointup('desktops--large') {
+        label:last-of-type {
+            height: 77%;
+            display: flex;
+            align-items: center;
+            margin-left: 10%;
+        textarea {
+            width: 62%;
+            resize: none;
+            border-radius: 2px;
+            border: none;
+            margin-left: 5px;
+            font-size: 18px;
+            }
+        }
+    }
+}

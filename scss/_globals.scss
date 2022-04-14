@@ -1,0 +1,12 @@
+h1, p, a, label, div {
+    font-family: $mainfont;
+    color: white;
+};
+
+button {
+    border: none;
+    font-family: $mainfont;
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.5em 1em;
+}

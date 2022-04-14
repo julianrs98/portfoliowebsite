@@ -1,0 +1,47 @@
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  .fade-in {
+      opacity: 0;
+      transition: opacity 1s;
+  }
+
+  .apear {
+      opacity: 1;
+      transition: opacity 4s;
+  }
+
+
+//transition from left
+
+
+@keyframes example {
+  0% {
+    right: 84%;
+  }
+  100% {
+    right: 0%
+  }
+}
+
+
+.appear-from-left {
+  overflow: hidden;
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+.animation-from-left-begin-state {
+  display: block;
+}

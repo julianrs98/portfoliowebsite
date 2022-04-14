@@ -1,0 +1,120 @@
+.portfolio--section {
+    @extend .margin_vertical;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    .triangle--topright {
+        position: absolute;
+        top: -3px;
+        right: 0px;
+        @include drawtriangle(topRight, $bluegreen, 100vh,  98vw)
+    }
+    .triangle--bottomleft {
+        @include drawtriangle(bottomLeft, $yellow,  100vh,  97.9vw);
+    }
+    > h1 {
+        position: absolute;
+        bottom: 1%;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+    h1:last-child {
+        position: absolute;
+        font-weight: bold;
+        margin-left: 5px;
+        top: 1%;
+        right: 1%;
+}
+
+
+.portfolio--section--navigation--button-bottom {
+    position: absolute;
+    top: 1vh;
+    left: 8vw;
+    @include drawtriangle(bottom, white);
+    border-width: 6vh 6vw 0 6vw;
+}
+
+.portfolio--section--navigation--button-top {
+    position: absolute;
+    bottom: 1.5vh;
+    right: 8vw;
+    font-weight: bold;
+    height: 8%;
+    @include drawtriangle(top, white);
+    border-width: 0vh 7vw 7vh 7vw;
+    height: 8.5vh;
+    &::before {
+        content: 'TOP';
+        position: absolute;
+        right: 30%;
+        padding-right: 2%;
+    }
+}
+
+//bottom left section
+
+.portfolio--programming {
+    &--github {
+        position: absolute;
+        background-image: url('../images/icons8-github-500@2x.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 17%;
+        width: 20%;
+        top: 41%;
+        left: 8%;
+        padding-top: 21%;
+        @include describeIcon('GITHUB');
+    }
+    &--projects {
+        position: absolute;
+        background-image: url('../images/icons8-google-sites-500.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 17%;
+        width: 20%;
+        top: 65%;
+        left: 35%;
+        padding-top: 20%;
+        @include describeIcon('ALL PROJECTS');
+    }
+    @include breakpointup(desktops) {
+        &--github {
+            height: 17%;
+            width: 14%;
+            top: 28%;
+            left: 8%;
+            padding-top: 14%;
+        }
+        &--projects {
+            width: 11%;
+            padding-top: 10%;
+        }
+    }
+}
+
+
+
+//bottom right section
+
+
+.portfolio--ux--projects {
+    position: absolute;
+    background-image: url('../images/Group 8-1@2x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 15%;
+    width: 20%;
+    top: 30%;
+    left: 61%;
+    padding-top: 16%;
+        @include describeIcon('UX PROJECTS');
+        @include breakpointup(desktops) {
+            width: 11%;
+            padding-top: 8%;
+            top: 20%;
+            left: 70%;
+        }
+    }
+}

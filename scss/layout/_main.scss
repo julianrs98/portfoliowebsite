@@ -1,0 +1,139 @@
+.main--section {
+    background-color: $bluegreen;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    .active {
+        color: $red;
+    }
+    &--carousel--buttons {
+        height: 11%;
+        width: 95%;
+        margin: 0 auto;
+        @extend .margin_centred;
+        div {
+            display: inline-block;
+            width: 33.3%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            @include gutter(10%, 5%)
+        }
+    }
+    &--text {
+        position: relative;
+        text-align: left;
+        width: 65%;
+        height: 60%;
+        margin: 0 auto;
+        margin-top: 15%;
+        z-index: 2;
+        @extend .margin_centred;
+        p {
+            height: 100%;
+            line-height: 170%;
+            font-size: 0.9375rem;
+            z-index: 2;
+            font-size: 1rem;
+        }
+    }
+    &--dots {
+        height: 5%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .active {
+            background-color: $red;
+        }
+        div {
+            background-color: white;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            z-index: 2;
+            &:not(div:last-child) {
+                margin-right: 5px;
+            }
+        }
+    }
+    &--navigation--button {
+        width: 55%;
+        height: 9.6%;
+        position: absolute;
+        bottom: 0%;
+        font-size: 0.7rem;
+        @include buttonGene(60%);
+    }
+    .triangle--bottomright--main {
+        @include drawtriangle(bottomRight, $yellow, 36vh, 62vw);
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        z-index: 1;
+    }
+    @include breakpointup(mobile--large) {
+        &--carousel--buttons {
+            div {
+                font-size: 1.5625rem;
+            }
+        }
+            &--text {
+            height: 55%;
+            width: 70%;
+            font-size: 2rem;
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+    @include breakpointup(tablet) {
+        &--carousel--buttons {
+                font-size: 1.6rem;
+            div {
+                font-size: inherit;
+            }
+        }
+        &--text {
+            height: 58%;
+            margin-top: 10%;
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @include breakpointup(desktops) {
+        .main--section--carousel--buttons {
+            height: 21%;
+            div {
+                font-size: 2.5rem;
+            }
+        }
+        &--text {
+                height: 40%;
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @include breakpointup('desktops--large') {
+            &--text {
+                height: 45%;
+            div {
+                height: 100%;
+            }
+            p {
+                font-size: 2.1rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

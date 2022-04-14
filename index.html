@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JRS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="nav">
+        <div class="container">
+            <div class="nav--bar">
+                <div><h1 class="nav--bar--logo"><a href="#">JRS</a></h1></div>
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="btn">ABOUT ME</li>
+                        <li class="btn">PORTFOLIO</li>
+                        <li class="btn">CONTACT</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <nav class="mobile--nav">
+        <div class="mobile--triangle--top"></div>
+        <div class="mobile--triangle--mid"></div>
+        <h1>ABOUT ME</h1>
+        <h1>PORTFOLIO</h1>
+        <div class="mobile--triangle--bottom"></div>
+        <h1>CONTACT</h1>
+        <a href="#" class="close"></a>
+    </nav>
+    <section class="hero">
+        <div class="hero--desktop">
+            <div class="hero--desktop--person">
+                <img src="./images/person.png" alt="Man in shirt">
+                <div class="triangle--right--hero"></div>
+            </div>
+            <div class="hero--desktop--text">
+                <div class="flex--holder">
+                    <div>
+                        <h1>Hello,</h1>
+                        <p>nice to see you on my webpage</p>
+                    </div>
+                </div>
+                <div class="btn hero--desktop--navigation--button">
+                    <div>BOTTOM</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero--mobile">
+            <div class="triangle--topleft"></div>
+            <div class="triangle--bottomright"></div>
+            <div class="hero--person"></div>
+            <div class="hero--text">
+                <h1>HELLO,</h1>
+                <p>Welcome on my site!</p>
+            </div>
+        </div>
+        <div class="btn hero--mobile--navigation--button">
+            <div>BOTTOM</div>
+        </div>
+    </section>
+    <main class="main--section">
+        <div class="main--section--carousel--buttons">
+            <div class="active">EXPERIENCE</div><div>SKILLS</div><div>ABOUT ME</div>
+        </div>
+        <div class="main--section--text appear-from-left">
+            <p class="fade-in">
+                While I was studying in highschool, I took a part in many startup ideas projects. It was my first step to passionate about IT world. After I passed the school in 2019 I was working for startup called Numbala as creative guy. In 2020 I finished bootcamp CodersLab JS Developer, but in meanwhile I got a job as UX specialist. There I was working on developing messneger chatbot.
+            </p>
+        </div>
+        <div class="main--section--dots">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="triangle--bottomright--main"></div>
+        <div class="btn main--section--navigation--button"><div>BOTTOM</div></div>
+    </main>
+    <section class="portfolio--section">
+        <div class="triangle--bottomleft">
+        </div>
+        <div class="triangle--topright">
+        </div>
+        <a href="https://github.com/julianrs98"><div class="portfolio--programming--github fade-in"></div></a>
+        <a href="#"><div class="portfolio--programming--projects fade-in"></div></a>
+        <h1>PROGRAMMING</h1>
+        <a href="#"><div class="portfolio--ux--projects fade-in"></div></a>
+        <div class="btn portfolio--section--navigation--button-top"></div>
+        <div class="btn portfolio--section--navigation--button-bottom">BOTTOM</div>
+        <h1>UX & UI</h1>
+    </section>
+    <section class="contact--section">
+        <div class="triangle--topright"> </div>
+        <h1>CATCH ME ON LINKEDIN</h1>
+        <h1>WRITE AN EMAIL</h1>
+        <a href="https://pl.linkedin.com/in/julian-schmitt-reichart-587bb7151"><div class="contact--section-linkedin"></div></a>
+        <form class="contact--section--form">
+            <label>YOUR EMAIL ADRESS</label>
+                <input type="email" name="email" required>
+            <label>MESSAGE
+                <textarea></textarea>
+                <button type="submit" name="sendmail" value="SEND">SEND</button>
+            </label>
+        </form>
+    </section>
+    <footer>
+        <div class="btn button--navigation--footer">
+        </div>
+        <div>
+            This site was also projected to develop my skills in CSS and SCSS. Almost everything here is elements. <a href="#">Check code on GitHub</a>
+        </div>
+    </footer>
+    <script src='script.js'></script>
+</body>
+</html>
+
+

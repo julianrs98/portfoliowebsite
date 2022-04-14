@@ -1,0 +1,87 @@
+//globals
+
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    @include breakpointup (desktops) {
+    }
+}
+
+//listners classes
+
+.disactive {
+    display: none;
+}
+
+//width containers
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+//borders
+
+.border_bot {
+    border-bottom: solid white 5px;
+}
+
+// nav buttons template
+
+@mixin buttonGene($width) {
+    width: $width;
+    height: 8%;
+    background-color: $red;
+    border-top: solid white 10px;
+    border-bottom: solid white 10px;
+    div {
+    @include drawtriangle(bottom, white, 22px, 17px);
+    }
+    @content;
+}
+
+
+
+//margins
+
+.margin_centred {
+    margin: 5px 0 5px 0;
+}
+
+.margin_vertical {
+    margin: 20px 0 20px 0;
+}
+
+.margin_bottom {
+    margin-bottom: 5px;
+
+}
+
+.margin_top {
+    margin-top: 5px;
+}
+
+
+//flex helpers
+
+.flex {
+    &-sb-c {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-sb-c-dc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
+

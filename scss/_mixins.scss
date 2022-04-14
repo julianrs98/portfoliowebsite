@@ -1,0 +1,77 @@
+$breakpoint-up: (
+    'mobile--large': 481px,
+    'tablet': 592px,
+    'desktops': 769px,
+    'desktops--large': 1207px
+);
+
+
+@mixin breakpointup($size) {
+    @media screen and (min-width: map-get($breakpoint-up, $size)) {
+        @content
+    }
+};
+
+
+
+
+//triangle generator
+
+@mixin drawtriangle($direction, $color: white, $height: 0px, $width: 0px) {
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+        @if $direction == topLeft {
+            border-width: $height $width 0 0;
+            border-color: $color transparent transparent transparent;
+        } @else if $direction == bottomRight {
+            border-width: 0 0 $height $width;
+            border-color: transparent transparent $color transparent;
+        } @else if $direction == topRight {
+            border-width: 0 $width $height 0;
+            border-color: transparent $color transparent transparent;
+        } @else if $direction == bottomLeft {
+            border-width: $height 0 0 $width;
+            border-color: transparent transparent transparent $color;
+        } @else if $direction == top {
+            border-width: 0 $width $height $width;
+            border-color: transparent transparent white transparent;
+        } @else if $direction == bottom {
+            color: white;
+            font-weight: bold;
+            font-family: $mainfont;
+            margin: 0 auto;
+            border-width: $height $width 0 17px;
+            border-color: $color transparent transparent transparent;
+        } @else if $direction == right {
+            border-width: 45.2vh 0 48vh 15vh;
+            border-color: transparent transparent transparent $color;
+        } @else if $direction == left {
+            border-width: $height $width $height 0;
+            border-color: transparent $color transparent transparent;
+        }
+        @content
+};
+
+
+@mixin describeIcon ($text) {
+    &::before {
+        content: $text;
+        font-family: $mainfont;
+        font-weight: bold;
+        text-decoration: underline;
+        text-transform: uppercase;
+        color: white;
+        display: block;
+    }
+};
+
+// gutter
+
+@mixin gutter($up, $down) {
+    margin: $up 0 $down 0;
+}
+
+
+
